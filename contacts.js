@@ -32,7 +32,7 @@ const removeContact = async (contactId) => {
   // ...твой код. Возвращает объект удаленного контакта. Возвращает null, если объект с таким id не найден.
   try {
     const contactsList = await listContacts();
-    const contactIdx = contactsList.findIndex(contact => contact.id === contactId);
+    const contactIdx = contactsList.findIndex(contact => contact.id === contactId.toString());
     if(contactIdx === -1){
       return null;
     }
